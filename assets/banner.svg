@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0F0F" />
+      <stop offset="65%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0F0F0F" />
+    </linearGradient>
+    <radialGradient id="glowRight" cx="85%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#337418" stop-opacity="0.22" />
+      <stop offset="55%" stop-color="#337418" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#0F0F0F" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowLeft" cx="12%" cy="20%" r="35%">
+      <stop offset="0%" stop-color="#5DD62C" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0F0F0F" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5DD62C" />
+      <stop offset="45%" stop-color="#337418" />
+      <stop offset="100%" stop-color="#202020" stop-opacity="0.2" />
+    </linearGradient>
+    <pattern id="engGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#202020" stroke-width="1" stroke-opacity="0.65" />
+      <circle cx="40" cy="40" r="1" fill="#337418" fill-opacity="0.35" />
+    </pattern>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Container -->
+  <rect width="1200" height="340" rx="14" fill="url(#bgGrad)" />
+  <rect width="1200" height="340" rx="14" fill="url(#engGrid)" />
+  <rect width="1200" height="340" rx="14" fill="url(#glowRight)" />
+  <rect width="1200" height="340" rx="14" fill="url(#glowLeft)" />
+
+  <!-- Right-side Systems & Inference Topology Graphic -->
+  <g transform="translate(760, 38)" opacity="0.92">
+    <!-- Outer Telemetry Frame -->
+    <rect x="0" y="0" width="380" height="264" rx="10" fill="#141414" fill-opacity="0.85" stroke="#242424" stroke-width="1.5" />
+    <line x1="0" y1="34" x2="380" y2="34" stroke="#242424" stroke-width="1" />
+    
+    <!-- Window Controls & Frame Header -->
+    <circle cx="18" cy="17" r="4.5" fill="#337418" />
+    <circle cx="34" cy="17" r="4.5" fill="#5DD62C" />
+    <circle cx="50" cy="17" r="4.5" fill="#2A2A2A" />
+    <text x="70" y="21" font-family="'JetBrains Mono', 'Fira Code', 'Consolas', monospace" font-size="11" fill="#8A8A8A" letter-spacing="1">SYS.TOPOLOGY // INFERENCE_ENGINE</text>
+    <text x="342" y="21" font-family="'JetBrains Mono', 'Fira Code', 'Consolas', monospace" font-size="10" fill="#5DD62C" font-weight="600">ONLINE</text>
+
+    <!-- Architecture Nodes: Input Layer -> Compute Kernel -> Token Stream -->
+    <!-- Layer 1: Systems Foundation -->
+    <rect x="24" y="56" width="96" height="44" rx="6" fill="#202020" stroke="#337418" stroke-width="1.2" />
+    <text x="72" y="75" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="10" font-weight="600" fill="#F8F8F8">OS &amp; KERNEL</text>
+    <text x="72" y="90" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#5DD62C">IPC / Win32 / Linux</text>
+
+    <rect x="24" y="116" width="96" height="44" rx="6" fill="#202020" stroke="#337418" stroke-width="1.2" />
+    <text x="72" y="135" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="10" font-weight="600" fill="#F8F8F8">RUNTIME CORE</text>
+    <text x="72" y="150" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#5DD62C">C / C++ / Python</text>
+
+    <rect x="24" y="176" width="96" height="44" rx="6" fill="#202020" stroke="#337418" stroke-width="1.2" />
+    <text x="72" y="195" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="10" font-weight="600" fill="#F8F8F8">LOCAL STATE</text>
+    <text x="72" y="210" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#5DD62C">SQLite WAL / Room</text>
+
+    <!-- Connector Lines L1 -> L2 -->
+    <path d="M 120 78 C 142 78, 142 138, 162 138" fill="none" stroke="#337418" stroke-width="1.5" stroke-dasharray="3 2" />
+    <path d="M 120 138 L 162 138" fill="none" stroke="#5DD62C" stroke-width="1.5" />
+    <path d="M 120 198 C 142 198, 142 138, 162 138" fill="none" stroke="#337418" stroke-width="1.5" stroke-dasharray="3 2" />
+
+    <!-- Layer 2: Central Inference / Compiler Node -->
+    <rect x="162" y="92" width="102" height="92" rx="8" fill="#1A2416" stroke="#5DD62C" stroke-width="1.5" />
+    <circle cx="213" cy="116" r="10" fill="#0F0F0F" stroke="#5DD62C" stroke-width="1.5" />
+    <circle cx="213" cy="116" r="3.5" fill="#5DD62C" filter="url(#softGlow)" />
+    <text x="213" y="144" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="700" fill="#F8F8F8">AI SYSTEMS</text>
+    <text x="213" y="159" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="8.5" fill="#5DD62C">INFERENCE &amp; DOM</text>
+    <text x="213" y="172" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="8.5" fill="#9E9E9E">FIRST PRINCIPLES</text>
+
+    <!-- Connector Lines L2 -> L3 -->
+    <path d="M 264 124 L 292 88" fill="none" stroke="#5DD62C" stroke-width="1.5" />
+    <path d="M 264 152 L 292 188" fill="none" stroke="#5DD62C" stroke-width="1.5" />
+
+    <!-- Layer 3: Output Systems -->
+    <rect x="292" y="64" width="66" height="52" rx="6" fill="#202020" stroke="#337418" stroke-width="1.2" />
+    <text x="325" y="86" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" font-weight="700" fill="#5DD62C">TTFT</text>
+    <text x="325" y="102" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="8.5" fill="#F8F8F8">Telemetry</text>
+
+    <rect x="292" y="160" width="66" height="52" rx="6" fill="#202020" stroke="#337418" stroke-width="1.2" />
+    <text x="325" y="182" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" font-weight="700" fill="#5DD62C">HUMAN</text>
+    <text x="325" y="198" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="8.5" fill="#F8F8F8">F1RST</text>
+
+    <!-- Bottom Status Bar inside Frame -->
+    <line x1="24" y1="234" x2="356" y2="234" stroke="#242424" stroke-width="1" />
+    <text x="24" y="250" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#7A7A7A">ARCH: DETERMINISTIC</text>
+    <text x="175" y="250" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#5DD62C">● NIC FAISALABAD INCUBATED</text>
+  </g>
+
+  <!-- Left-side Identity & Typography -->
+  <g transform="translate(64, 0)">
+    <!-- Top Terminal Badge -->
+    <rect x="0" y="48" width="246" height="28" rx="6" fill="#202020" stroke="#337418" stroke-width="1" />
+    <circle cx="16" cy="62" r="4" fill="#5DD62C" filter="url(#softGlow)" />
+    <text x="28" y="66" font-family="'JetBrains Mono', 'Fira Code', 'Consolas', monospace" font-size="11.5" font-weight="600" fill="#5DD62C" letter-spacing="1.2">FIRST-PRINCIPLES ENGINEERING</text>
+
+    <!-- Main Name -->
+    <text x="0" y="142" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="56" font-weight="800" fill="#F8F8F8" letter-spacing="2.5">ABDUL HAFEEZ</text>
+
+    <!-- Subtitle / Positioning -->
+    <text x="2" y="180" font-family="'JetBrains Mono', 'Fira Code', 'Consolas', monospace" font-size="14.5" font-weight="600" fill="#5DD62C" letter-spacing="1.6">
+      SOFTWARE BUILDER <tspan fill="#337418" dx="4" dy="0">|</tspan><tspan fill="#F8F8F8" dx="4" dy="0">AI INFERENCE ENGINEER</tspan> <tspan fill="#337418" dx="4" dy="0">|</tspan><tspan fill="#5DD62C" dx="4" dy="0">STARTUP FOUNDER</tspan>
+    </text>
+
+    <!-- Accent Divider Line -->
+    <rect x="2" y="202" width="620" height="2" fill="url(#accentLine)" />
+
+    <!-- Tagline Box -->
+    <rect x="2" y="224" width="610" height="44" rx="8" fill="#202020" fill-opacity="0.75" stroke="#2A2A2A" stroke-width="1" />
+    <rect x="2" y="224" width="4" height="44" rx="2" fill="#5DD62C" />
+    <text x="20" y="251" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="16" font-style="italic" font-weight="500" fill="#F8F8F8" letter-spacing="0.4">
+      "Building useful software. Understanding the systems behind it."
+    </text>
+
+    <!-- Sub-metadata Footer -->
+    <text x="4" y="294" font-family="'JetBrains Mono', 'Fira Code', 'Consolas', monospace" font-size="11.5" fill="#888888" letter-spacing="0.8">
+      CS STUDENT @ NUML  •  FOUNDER @ HUMAN F1RST  •  FAISALABAD, PAKISTAN
+    </text>
+  </g>
+
+  <!-- Outer Crisp Border -->
+  <rect x="1" y="1" width="1198" height="338" rx="13" fill="none" stroke="#202020" stroke-width="2" />
+  <path d="M 1 40 L 1 14 Q 1 1 14 1 L 40 1" fill="none" stroke="#5DD62C" stroke-width="2" />
+  <path d="M 1199 300 L 1199 326 Q 1199 339 1186 339 L 1160 339" fill="none" stroke="#5DD62C" stroke-width="2" />
+</svg>

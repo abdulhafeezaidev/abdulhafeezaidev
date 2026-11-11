@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495px" height="195px">
+  <rect x="0.5" y="0.5" width="494" height="194" rx="4.5" fill="#0F0F0F" stroke="#202020" stroke-width="1" />
+  
+  <!-- Header -->
+  <text x="25" y="32" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="15" font-weight="700" fill="#5DD62C">Abdul Hafeez's GitHub Telemetry</text>
+  <text x="470" y="32" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#888888">@abdulhafeezaidev</text>
+  <line x1="25" y1="44" x2="470" y2="44" stroke="#202020" stroke-width="1" />
+
+  <!-- Left Column: Key Metrics -->
+  <g transform="translate(25, 66)">
+    <circle cx="6" cy="-4" r="3.5" fill="#5DD62C" />
+    <text x="18" y="0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="12.5" fill="#CCCCCC">Owned Repositories:</text>
+    <text x="185" y="0" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="700" fill="#F8F8F8">19</text>
+
+    <circle cx="6" cy="24" r="3.5" fill="#337418" />
+    <text x="18" y="28" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="12.5" fill="#CCCCCC">Public Systems:</text>
+    <text x="185" y="28" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="700" fill="#F8F8F8">18</text>
+
+    <circle cx="6" cy="52" r="3.5" fill="#5DD62C" />
+    <text x="18" y="56" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="12.5" fill="#CCCCCC">Total Contributions:</text>
+    <text x="185" y="56" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="700" fill="#F8F8F8">79</text>
+
+    <circle cx="6" cy="80" r="3.5" fill="#337418" />
+    <text x="18" y="84" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="12.5" fill="#CCCCCC">Automated Tests:</text>
+    <text x="185" y="84" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="700" fill="#5DD62C">540+</text>
+
+    <circle cx="6" cy="108" r="3.5" fill="#5DD62C" />
+    <text x="18" y="112" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="12.5" fill="#CCCCCC">Primary Focus:</text>
+    <text x="185" y="112" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="600" fill="#5DD62C">AI Systems</text>
+  </g>
+
+  <!-- Vertical Divider -->
+  <line x1="232" y1="54" x2="232" y2="178" stroke="#202020" stroke-width="1" />
+
+  <!-- Right Column: Most-Used Languages Breakdown -->
+  <g transform="translate(250, 62)">
+    <text x="0" y="0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="12.5" font-weight="600" fill="#F8F8F8">Top Languages by Codebase Volume</text>
+    
+    <!-- Multi-segment Progress Bar -->
+    <g transform="translate(0, 10)">
+      <rect x="0" y="0" width="220" height="8" rx="4" fill="#202020" />
+      <rect x="0.0" y="0" width="90.2" height="8" fill="#5DD62C" />
+      <rect x="90.2" y="0" width="68.0" height="8" fill="#3F8E1E" />
+      <rect x="158.2" y="0" width="18.7" height="8" fill="#46B922" />
+      <rect x="176.9" y="0" width="14.9" height="8" fill="#337418" />
+      <rect x="191.8" y="0" width="11.0" height="8" fill="#7CE852" />
+      <rect x="202.9" y="0" width="9.7" height="8" fill="#295E13" />
+      <rect x="212.6" y="0" width="7.4" height="8" fill="#98F075" />
+    </g>
+    <g transform="translate(0, 38)">
+      <circle cx="5" cy="-4" r="4" fill="#5DD62C" />
+      <text x="14" y="0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="11" font-weight="500" fill="#F8F8F8">TypeScript</text>
+      <text x="14" y="12" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#888888">41.0%</text>
+    </g>
+    <g transform="translate(114, 38)">
+      <circle cx="5" cy="-4" r="4" fill="#3F8E1E" />
+      <text x="14" y="0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="11" font-weight="500" fill="#F8F8F8">PHP / Blade</text>
+      <text x="14" y="12" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#888888">30.9%</text>
+    </g>
+    <g transform="translate(0, 66)">
+      <circle cx="5" cy="-4" r="4" fill="#46B922" />
+      <text x="14" y="0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="11" font-weight="500" fill="#F8F8F8">Kotlin</text>
+      <text x="14" y="12" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#888888">8.5%</text>
+    </g>
+    <g transform="translate(114, 66)">
+      <circle cx="5" cy="-4" r="4" fill="#337418" />
+      <text x="14" y="0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="11" font-weight="500" fill="#F8F8F8">JavaScript</text>
+      <text x="14" y="12" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#888888">6.8%</text>
+    </g>
+    <g transform="translate(0, 94)">
+      <circle cx="5" cy="-4" r="4" fill="#7CE852" />
+      <text x="14" y="0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="11" font-weight="500" fill="#F8F8F8">Python</text>
+      <text x="14" y="12" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#888888">5.0%</text>
+    </g>
+    <g transform="translate(114, 94)">
+      <circle cx="5" cy="-4" r="4" fill="#295E13" />
+      <text x="14" y="0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="11" font-weight="500" fill="#F8F8F8">Dart</text>
+      <text x="14" y="12" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#888888">4.4%</text>
+    </g>
+  </g>
+</svg>
